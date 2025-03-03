@@ -17,13 +17,13 @@ class TestSlidingWindowCache(unittest.TestCase):
         cache = SlidingWindowCache(capacity=5)
         with self.assertRaises(SlidingWindowException) as context:
             cache.get_recent_windows(-1)
-        self.assertEqual(str(context.exception), "roses are red ,violets are blue")
+        self.assertEqual(str(context.exception), "requested no of windows should be positive")
 
     def test_get_recent_windows_with_n_greater_than_capacity(self):
         cache = SlidingWindowCache(capacity=5)
         with self.assertRaises(SlidingWindowException) as context:
             cache.get_recent_windows(6)
-        self.assertEqual(str(context.exception), "all i wanna say is , fuck u")
+        self.assertEqual(str(context.exception), "request exceeds cache size.")
 
 if __name__ == '__main__':
     unittest.main()
