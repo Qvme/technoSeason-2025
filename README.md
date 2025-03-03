@@ -14,3 +14,6 @@ This repository contains the code submissions for the TechnoSeason 2025. The rep
 1. Clone the repository:
    ```bash
    git clone https://github.com/Qvme/technoSeason-2025.git
+
+## For Evaluators  
+Consider using a Linux machine for assessment and evaluation.
